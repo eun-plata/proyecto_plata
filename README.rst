@@ -15,7 +15,7 @@ $ pip install duplik2
 
 ```bash
 python3 setup.py sdist
-pip install ../proyecto_plata/dist/duplik2-0.0.1.tar.gz
+pip install ../proyecto_plata/dist/proyecto_plata-0.0.1.tar.gz
 ```
 
 ## License
