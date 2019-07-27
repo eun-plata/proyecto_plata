@@ -1,5 +1,5 @@
 from unittest import TestCase, mock
-import main
+import duplik2
 import os
 
 
@@ -10,7 +10,7 @@ class TestProject(TestCase):
         Should return a dictionary related by file and its size.
         """
         root_dir = "/Users/eunyoungcho/Pictures/2019/example"
-        result = main.get_hash_by_file(root_dir)
+        result = duplik2.get_hash_by_file(root_dir)
 
         expected_value = {
             '/Users/eunyoungcho/Pictures/2019/example/IMG_0201.JPG': '1587fd830af0e02c6a0f6c0d4f21f2af4827989b',
@@ -44,7 +44,7 @@ class TestProject(TestCase):
             'IMG_0208.JPG': '3ge43',
             'IMG_0209.JPG': 'c2g4'
         }
-        result = main.get_reverse_index(map)
+        result = duplik2.get_reverse_index(map)
 
         expected_value = {
             '1234': {'IMG_0300.JPG', 'IMG_0400.JPG'},
@@ -74,7 +74,7 @@ class TestProject(TestCase):
             ('IMG_0201.JPG', ['IMG_0210.JPG'])
         ]
 
-        result = main.format_file_by_hash_dict(map)
+        result = duplik2.format_file_by_hash_dict(map)
         self.assertIsInstance(result, list)
         self.assertEqual(result, expected_value)
 
@@ -83,7 +83,7 @@ class TestProject(TestCase):
         Should return all files except those start with a dot.
         """
         files = ['archivo.jps', 'file.png', '.oculto']
-        result = main.ignore_hidden_files(files)
+        result = duplik2.ignore_hidden_files(files)
 
         expected_value = ['archivo.jps', 'file.png']
 
@@ -95,7 +95,7 @@ class TestProject(TestCase):
         """
         moduledirpath = os.path.dirname(__file__)
         filepath = os.path.join(moduledirpath, "test_file.txt")
-        result = main.hash_file(filepath)
+        result = duplik2.hash_file(filepath)
 
         expected_value = "50a79820e404c67ebbeb3f79ad96596cf1716be2"
         self.assertEqual(expected_value, result)

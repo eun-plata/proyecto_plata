@@ -84,7 +84,3 @@ def command_find_repeated(root_dir):
     summary = format_file_by_hash_dict(files_by_hash)
     print_summary(summary)
 
-
-if __name__ == '__main__':
-    root_dir = "/Users/eunyoungcho/Pictures/2019/example"
-    command_find_repeated(root_dir)
