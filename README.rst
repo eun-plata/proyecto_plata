@@ -8,7 +8,7 @@ Se trata de un programa por línea de comandos que encuentra los archivos repeti
 Duplik2 se instala con [pip](https://pip.pypa.io/en/stable/)
 
 ```bash
-$ pip install duplil2
+$ pip install duplik2
 ```
 
 ## Uso
