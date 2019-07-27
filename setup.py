@@ -41,7 +41,7 @@ setuptools.setup(
         "Operating System :: MacOS",
         "Operating System :: POSIX :: Linux",
         "Programming Language :: Python :: 3.7",
-        "Topic :: Utility"
+        "Topic :: Utils"
     ),
     keywords='proyecto_plata archivo file repetidos carpeta',
     packages=setuptools.find_packages(exclude=['test*']),
